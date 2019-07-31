@@ -9,7 +9,7 @@ const app = express();
 const router = express.Router();
 
 //Connection with database
-const URL_CONNECT = ""
+const URL_CONNECT = "mongodb+srv://lucas:lucassousa@tranningapi-hbqnj.mongodb.net/dbmoved?retryWrites=true"
 mongoose.connect(URL_CONNECT);
 
 //Models

@@ -12,11 +12,6 @@ const router = express.Router();
 // const URL_CONNECT = "mongodb+srv://lucas:lucassousa@tranningapi-hbqnj.mongodb.net/dbmoved?retryWrites=true"
 // mongoose.connect(URL_CONNECT);
 
-
-
-
-
-
 const options = {
     autoIndex: false, // Don't build indexes
     reconnectTries: 30, // Retry up to 30 times
@@ -34,6 +29,8 @@ const connectWithRetry = () => {
     setTimeout(connectWithRetry, 5000)
   })
 }
+
+connectWithRetry()
 
 
 //Models

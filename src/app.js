@@ -16,20 +16,22 @@ mongoose.connect(URL_CONNECT);
 
 //AQUI VEM AS MODEL
 
+const students = require("./models/students")
+
+
 //Get Routes
 
 const indexRoutes = require("./routes/index");
 
 //AQUI VEM AS ROUTES
-
+const registerRoutes = require("./routes/register")
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", indexRoutes);
-
-
+app.use("/register",registerRoutes)
 
 
 
